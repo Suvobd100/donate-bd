@@ -21,65 +21,76 @@
 </head>
 
 <body class="lexend">
-    <main class="w-11/12 mx-auto">
+    <main class="container mx-auto">
         <header class="text-4xl">
             <!-- nav start -->
-            <div class="navbar  bg-slate-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Item 1</a></li>
-                      <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </li>
-                      <li><a>Item 3</a></li>
-                    </ul>
-                  </div>
-                  <a class="text-xl w-28 h-12 bg-lime-300 rounded-lg p-2 text-center">Blog</a>
+            <div class="flex bg-slate-100 pl-14 pr-14">
+                <div class="navbar-start mt-4">
+                  
+                  <button class="text-xl w-1/6  bg-lime-300 rounded-md p-2 text-center">Blog</button>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                      <details>
-                        <summary>Parent</summary>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+               
+                <div class="navbar-center lg:flex h-32 mt-4">
+                <!-- menu -->
+                  <ul class="menu-horizontal ">
+                    <li><img class="w-5/6" src="./assets/logo/logo.png" alt="Logo Donate Bangladesh" srcset=""></li>
+                   
+                    <li><a class="text-xl">Donate Bangladesh</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end">
-                  <a class="btn">Button</a>
+                <div class="navbar-end flex items-start gap-2 mt-8">
+                  <a class=""><img src="./assets/logo/coin.png" alt="" srcset=""></a>
+                  <div class="gap-3 text-xl items-center flex">
+                    <a><span>5500</span></a>
+                  <a><span>BDT</span></a>
+                  </div>
                 </div>
-              </div>
+            </div>
             <!-- nav end -->
         </header>
 
         <body>
+            <div class="bg-orange-300 min-h-screen mx-auto">
+                <div class="mb-4 container bg-blue-500 p-6">
+                    <!-- tab -->
+                <div class="flex justify-center gap-4">
+                    <button
+                      id="donation-tab"
+                      class="sm:w-1/12 py-2 rounded-md  text-black font-semibold bg-lime-300"
+                    >
+                      Assistant
+                    </button>
+                    <button
+                      id="history-tab"
+                      class="sm:w-1/12 py-2 rounded-md border-4 text-gray-600 font-semibold bg-neutral-50"
+                    >
+                      History
+                    </button>
+                  </div>
+                  <!-- card--1 -->
+                <section class=" flex justify-center mt-4">
+                    
+                    <div class="card bg-base-100 w-8/12 shadow-xl grid grid-cols-2">
+                        <figure class="px-10 pt-10">
+                          <img class="w-2/4"
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes"
+                            class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 class="card-title">Shoes!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <div class="card-actions">
+                            <button class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+
+
+                </section>
+                </div>
+            </div>
+            
             <script src="./assets/js/index.js"></script>
         </body>
         <footer></footer>
