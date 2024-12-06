@@ -1,6 +1,4 @@
-// console.log('Js connect');
-
-
+// Noakhali Donation
 document.getElementById('IdBtnNkhali').addEventListener('click',function () {
 
     let nKhaliDonationAmtPrv=Number(document.getElementById('TxtNkhaliDonationAmt').innerText);
@@ -25,23 +23,19 @@ document.getElementById('IdBtnNkhali').addEventListener('click',function () {
             return;
 
     }
-  
-    
-    // set text value
-
-    let newTotalAmount= nKhaliDonationAmt+nKhaliDonationAmtPrv;
-    alert(newTotalAmount)
-
-    document.getElementById('TxtNkhaliDonationAmt').innerText= newTotalAmount;
-   
-   
-    // clear input value
-    document.getElementById('valNkhaliAmt').value='';
     
 
-
-    // deduct from cash in hand
+    // deduct from cash in hand section start
     const cashInHandAmt=Number(document.getElementById('TxtCashInHand').innerText);
+
+    
+    if (cashInHandAmt < nKhaliDonationAmt){
+        alert('Insufficient cash in hand for transaction');
+        document.getElementById('valNkhaliAmt').focus();
+
+        return;
+
+    }
 
     // alert(cashInHandAmt)
 
@@ -49,8 +43,22 @@ document.getElementById('IdBtnNkhali').addEventListener('click',function () {
 
     document.getElementById('TxtCashInHand').innerText= cashInhandDeductAmt;
 
+    // set text value
+
+    let newTotalAmount= nKhaliDonationAmt+nKhaliDonationAmtPrv;
+    alert(newTotalAmount)
+
+    document.getElementById('TxtNkhaliDonationAmt').innerText= newTotalAmount;
+    
+    
+    // clear input value
+    document.getElementById('valNkhaliAmt').value='';
+
+
     // Show the modal and set the donation amount
     document.getElementById('txtDonationModal').innerText = nKhaliDonationAmt;
+
+    
     // add modal
     document.getElementById('myModal').classList.add('modal-open');
     
@@ -105,7 +113,6 @@ document.getElementById('btnFeniDonation').addEventListener('click',function () 
         return;
 
     }
-
 
     // alert(cashInHandAmt)
     // deduct from cash in hand
