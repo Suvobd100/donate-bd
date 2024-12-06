@@ -24,7 +24,7 @@
     <main class="container mx-auto">
         <header class="text-4xl">
             <!-- nav start -->
-            <div class="flex bg-slate-100 pl-14 pr-14">
+            <div class="flex-no-wrap flex w-[81%] items-center justify-center bg-slate-100 pl-16 pr-16 fixed top-0 z-10">
                 <div class="navbar-start mt-4">
                   
                   <button class="text-xl w-1/6  bg-lime-300 rounded-md p-2 text-center">Blog</button>
@@ -38,8 +38,8 @@
                     <li><a class="text-xl">Donate Bangladesh</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end flex items-start gap-2 mt-8">
-                  <a class=""><img src="./assets/logo/coin.png" alt="coin"></a>
+                <div class="navbar-end flex items-start gap-2 mt-10">
+                  <img class="" src="./assets/logo/coin.png" alt="coin">
                   <div class="gap-3 text-xl items-center flex">
                     <a><span id="TxtCashInHand">5500</span></a>
                   <a><span>BDT</span></a>
@@ -124,17 +124,21 @@
                                 <div class="card-body items-start text-center">
                                     <button class="text-xl w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center">
                                         <span class="w-2/6"><img src="./assets/logo/coin.png" alt="coin" ></span>
-                                        <span class="mx-2">0</span>
+                                        <span id="txtFeniDonationAmt" class="mx-2">
+                                              0
+                                        </span>
                                         <span>BDT</span>
                                     </button>
                                 <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                                 <p class="text-left"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
                                 <span class="w-11/12 text-start">
-                                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+
+                                    <input id="valFeniAmt" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+
                                 </span>
                                 
-                                    <button class="text-xl w-11/12  bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                    <button id="btnFeniDonation" class="text-xl w-11/12  bg-lime-300 rounded-md p-4 text-center flex justify-center">
                                         <span>Donate Now</span>
                                     </button>
                                 
@@ -211,7 +215,7 @@
               <img class="w-20 h-20" src="./assets/logo/smile.png" alt="smile face emoji">
              </span>
                 <h2 class="font-bold text-lg">Donation Successful Received with Thanks</h2>
-              <p>Your donation amount is: <span id="TxtNkhaliDonationAmtModal" class="text-lg font-semibold text-teal-800"></span></p>
+              <p>Your donation amount is: <span id="txtDonationModal" class="text-lg font-semibold text-teal-800"></span></p>
                 <div class="modal-action">
                   <button class="btn" id="closeModalBtn">Close</button>
               </div>
@@ -219,6 +223,8 @@
     </div>
             
             <script src="./assets/js/index.js"></script>
+            <script src="./assets/js/utilities.js"></script>
+
         </body>
         <footer>
             <footer class="footer bg-neutral text-neutral-content items-center p-4">
