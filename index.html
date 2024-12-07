@@ -23,26 +23,28 @@
 <body class="lexend">
     <main class="container mx-auto">
       
-      <header class="text-4xl mb-10">
+      <header class="text-4xl mb-10 ml-2 ">
         <!-- nav start -->
-        <div class="flex-no-wrap flex w-[81%] items-center justify-center bg-slate-100 pl-16 pr-16 fixed top-0 z-10">
-            <div class="navbar-start mt-4">
+        <div class="flex-no-wrap flex lg:w-[81%] items-center justify-center bg-slate-100 lg:pl-16 lg:pr-16  fixed top-0 z-10">
+            <div class="navbar-start mt-4 ">
               
-              <button class="text-xl w-1/6  bg-lime-300 rounded-md p-2 text-center">Blog</button>
+              <button id="blogButton" class="text-xl lg:w-1/6  bg-lime-300 rounded-md p-2 text-center ml-4">
+                Blog
+              </button>
             </div>
            
-            <div class="navbar-center lg:flex h-32 mt-4">
+            <div class="navbar-center lg:flex lg:h-32 mt-4">
             <!-- menu -->
-              <ul class="menu-horizontal ">
-                <li><img class="w-5/6" src="./assets/logo/logo.png" alt="Logo Donate Bangladesh" srcset=""></li>
+              <ul class="menu-horizontal p-2">
+                <li class="hidden lg:block"><img class="w-5/6" src="./assets/logo/logo.png" alt="Logo Donate Bangladesh"></li>
                
-                <li><a class="text-xl">Donate Bangladesh</a></li>
+                <li><a class="lg:text-xl text-lg ">Donate Bangladesh</a></li>
               </ul>
             </div>
-            <div class="navbar-end flex items-start gap-2">
-              <img class="" src="./assets/logo/coin.png" alt="coin">
-              <div class="gap-3 text-xl items-center flex">
-                <a><span id="TxtCashInHand">5500</span></a>
+            <div class="navbar-end flex lg:items-start gap-2 justify-center ">
+              <img class="mt-4" src="./assets/logo/coin.png" alt="coin">
+              <div class="gap-1 lg:text-xl items-center flex text-sm mt-4">
+                <a><span id="TxtCashInHand ">5500</span></a>
               <a><span>BDT</span></a>
               </div>
             </div>
@@ -51,19 +53,19 @@
     </header>        
 
         <body>
-            <div class="bg-orange-300 min-h-screen mx-auto mt-40">
-                <div class="mb-4 container bg-blue-500 p-6 ">
+            <div class="min-h-screen mx-auto mt-40">
+                <div class="mb-4 container p-6 ">
                     <!-- tab -->
                 <div class="flex justify-center gap-4">
                     <button
                       id="donation-tab"
-                      class="sm:w-1/12 py-2 rounded-md  text-black font-semibold bg-lime-300"
+                      class="lg:w-1/12 lg:py-2 p-2 rounded-md  text-black font-semibold bg-lime-300"
                     >
                       Donation
                     </button>
                     <button
                       id="btnHistoryTab"
-                      class="sm:w-1/12 py-2 rounded-md border-4 text-gray-600 font-semibold bg-neutral-50"
+                      class="lg:w-1/12 lg:py-2 p-2 rounded-md border-4 text-gray-600 font-semibold bg-neutral-50"
                     >
                       History
                     </button>
@@ -73,18 +75,17 @@
                 <!-- donation div start -->
                 <div id="donation-div">
                     <!-- card--1 -->
-                    <section class="mt-4">
-                        
-                        <div class="bg-green-500 p-2 flex justify-center">
-                            <div class="bg-base-100 w-8/12 shadow-xl grid grid-cols-2 rounded-md">
+                    <section class="mt-4"> 
+                        <div class="p-2 flex justify-center">
+                            <div class="bg-base-100 lg:w-8/12 shadow-xl grid grid-cols-1 lg:grid-cols-2 rounded-md">
                                 <figure class="p-10 ">
-                                <img class="w-5/6 h-full"
+                                <img class="lg:w-5/6 h-full"
                                     src="./assets/pictures/noakhali.png"
                                     alt="noakhali flood area donation picture"
                                     class="rounded-xl" />
                                 </figure>
-                                <div class="card-body items-start text-center">
-                                    <button class="text-xl w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                <div class="card-body lg:items-start items-center text-center">
+                                    <button class="lg:text-xl w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center ">
                                         <span class="w-2/6"><img src="./assets/logo/coin.png" alt="coin" ></span>
                                         <span 
                                             id="TxtNkhaliDonationAmt" 
@@ -92,15 +93,17 @@
                                         </span>
                                         <span>BDT</span>
                                     </button>
-                                <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
-                                <p class="text-left"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                                <div class="">
+                                  <h2 class="card-title text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
+                                <p class="text-left "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                                </div>
 
                                 <span class="w-11/12 text-start">
                                     <input id="valNkhaliAmt" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                                 </span>
                                 
-                                    <button class="text-xl w-11/12  bg-lime-300 rounded-md p-4 text-center flex justify-center">
-                                        <span id="IdBtnNkhali">Donate Now</span>
+                                    <button id="IdBtnNkhali" class="lg:text-xl lg:w-11/12  bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                        <span>Donate Now</span>
                                     </button>
                                 
                                 </div>
@@ -114,23 +117,23 @@
                     <!-- card--2 -->
                     <section class="mt-4">
                         
-                        <div class="bg-green-500 p-2 flex justify-center">
-                            <div class="bg-base-100 w-8/12 shadow-xl grid grid-cols-2 rounded-md">
+                        <div class="p-2 flex justify-center">
+                            <div class="bg-base-100 w-8/12 shadow-xl grid grid-cols-1 lg:grid-cols-2 rounded-md">
                                 <figure class="p-10 ">
-                                <img class="w-5/6 h-full"
+                                <img class="lg:w-5/6 h-full "
                                     src="./assets/pictures/feni.png"
                                     alt="feni flood area donation picture"
                                     class="rounded-xl" />
                                 </figure>
-                                <div class="card-body items-start text-center">
-                                    <button class="text-xl w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                <div class="card-body lg:items-start text-center">
+                                    <button class="lg:text-xl lg:w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center">
                                         <span class="w-2/6"><img src="./assets/logo/coin.png" alt="coin" ></span>
                                         <span id="txtFeniDonationAmt" class="mx-2">
                                               0
                                         </span>
                                         <span>BDT</span>
                                     </button>
-                                <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
+                                <h2 class="card-title text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
                                 <p class="text-left"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
                                 <span class="w-11/12 text-start">
@@ -139,7 +142,7 @@
 
                                 </span>
                                 
-                                    <button id="btnFeniDonation" class="text-xl w-11/12 bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                    <button id="btnFeniDonation" class="lg:text-xl lg:w-11/12 bg-lime-300 rounded-md p-4 text-center flex justify-center">
                                         <span>Donate Now</span>
                                     </button>
                                 
@@ -154,23 +157,23 @@
                     <!-- card--3 -->
                     <section class="mt-4">
                         
-                        <div class="bg-green-500 p-2 flex justify-center">
-                            <div class="bg-base-100 w-8/12 shadow-xl grid grid-cols-2 rounded-md">
+                        <div class="p-2 flex justify-center">
+                            <div class="bg-base-100 w-8/12 shadow-xl grid grid-cols-1 lg:grid-cols-2 rounded-md">
                                 <figure class="p-10 ">
-                                <img class="w-5/6 h-full"
+                                <img class="lg:w-5/6 h-full"
                                     src="./assets/pictures/quota-protest.png"
                                     alt="quota protest picture"
                                     class="rounded-xl" />
                                 </figure>
-                                <div class="card-body items-start text-center">
-                                    <button class="text-xl w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                <div class="card-body lg:items-start text-center">
+                                    <button class="lg:text-xl lg:w-2/6  bg-lime-300 rounded-md p-4 text-center flex justify-center">
                                         <span class="w-2/6"><img src="./assets/logo/coin.png" alt="coin" ></span>
                                         <span id="txtQmovementAmt" 
                                         class="mx-2">
                                           0</span>
                                         <span>BDT</span>
                                     </button>
-                                <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+                                <h2 class="card-title text-xl">Aid for Injured in the Quota Movement</h2>
                                 <p class="text-left"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
 
                                 <span class="w-11/12 text-start">
@@ -179,7 +182,7 @@
                                 </span>
                                 
                                     <button id="btnQmovmentDonation"
-                                     class="text-xl w-11/12  bg-lime-300 rounded-md p-4 text-center flex justify-center">
+                                     class="lg:text-xl lg:w-11/12  bg-lime-300 rounded-md p-4 text-center flex justify-center">
                                         <span>Donate Now</span>
                                     </button>
                                 
@@ -196,7 +199,7 @@
                 <!-- history part start -->
                  <div
                       id="history-section" 
-                      class="hidden p-4 rounded-lg shadow-md border border-blue-200 mt-2">
+                      class="hidden p-4 rounded-lg shadow-md border mt-2">
 
                       <h3
                         id="heading-history"
@@ -231,6 +234,7 @@
             
             <script src="./assets/js/index.js"></script>
             <script src="./assets/js/utilities.js"></script>
+            <script src="./assets/js/link.js"></script>
 
         </body>
         <footer>
@@ -247,7 +251,7 @@
                     <path
                       d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
                   </svg>
-                  <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                  <p>Copyright © Suvo - All right reserved</p>
                 </aside>
                 <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
                   <a>

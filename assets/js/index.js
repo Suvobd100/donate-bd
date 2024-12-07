@@ -209,7 +209,7 @@ document.getElementById('btnQmovmentDonation').addEventListener('click',function
     // set text value
 
     let newTotalAmount= (qMovementDonationAmt + qMovementDonationAmtPrv);
-    alert(newTotalAmount)
+    // alert(newTotalAmount)
 
     document.getElementById('txtQmovementAmt').innerText= newTotalAmount;
    
@@ -227,7 +227,7 @@ document.getElementById('btnQmovmentDonation').addEventListener('click',function
 
 })
 
-// ----------------------------------end Qmovment
+// ----------------------------------end Qmovment-----------------
 
 
 // Close modal functionality
@@ -312,3 +312,4 @@ document.getElementById('donation-tab').addEventListener('click',function() {
      document.getElementById("btnHistoryTab").classList.add("text-gray-600", "bg-neutral-50")
     
 })
+
