@@ -239,7 +239,22 @@ document.getElementById('closeModalBtn').addEventListener('click', function () {
 //--------------- history btn------
 
 document.getElementById('btnHistoryTab').addEventListener('click',function () {
-    
+
+    // remove history hidden class
+    document.getElementById("history-section").classList.remove("hidden");
+   
+    // Hide donation div
+    document.getElementById("donation-div").classList.add("hidden");
+
+    // button History tab
+    document.getElementById("btnHistoryTab").classList.remove("text-gray-600", "bg-neutral-50")
+    document.getElementById("btnHistoryTab").classList.add("text-black", "bg-lime-300")
+    // button donation tab
+    document.getElementById("donation-tab").classList.add( "text-gray-600", "bg-neutral-50")
+    // document.getElementById("donation-tab").classList.add( "text-black", "bg-lime-300")
+
+
+    // store tag's in variable
     const inputs=document.getElementsByTagName('input');
 
     const h2Elements = document.getElementsByTagName('h2');
@@ -281,3 +296,19 @@ document.getElementById('btnHistoryTab').addEventListener('click',function () {
         
     
 });
+
+// Donation button
+document.getElementById('donation-tab').addEventListener('click',function() {
+
+    // Add history to hidden class
+    document.getElementById("history-section").classList.add("hidden");
+    // remove donation to hidden class
+    document.getElementById("donation-div").classList.remove("hidden");
+
+    document.getElementById("donation-tab").classList.remove( "text-gray-600", "bg-neutral-50")
+    document.getElementById("donation-tab").classList.add( "text-black", "bg-lime-300")
+
+     // button History tab
+     document.getElementById("btnHistoryTab").classList.add("text-gray-600", "bg-neutral-50")
+    
+})
