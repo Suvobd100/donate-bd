@@ -39,13 +39,13 @@ document.getElementById('IdBtnNkhali').addEventListener('click',function () {
 
     // alert(cashInHandAmt)
 
-    let cashInhandDeductAmt= cashInHandAmt-nKhaliDonationAmt;
+    let cashInhandDeductAmt= (cashInHandAmt-nKhaliDonationAmt).toFixed(2);
 
     document.getElementById('TxtCashInHand').innerText= cashInhandDeductAmt;
 
     // set text value
 
-    let newTotalAmount= nKhaliDonationAmt+nKhaliDonationAmtPrv;
+    let newTotalAmount= (nKhaliDonationAmt+nKhaliDonationAmtPrv).toFixed(2);
     // alert(newTotalAmount)
 
     document.getElementById('TxtNkhaliDonationAmt').innerText= newTotalAmount;
@@ -116,14 +116,14 @@ document.getElementById('btnFeniDonation').addEventListener('click',function () 
     // alert(cashInHandAmt)
     // deduct from cash in hand
 
-    let cashInhandDeductAmt= cashInHandAmt-feniDonationAmt;
+    let cashInhandDeductAmt= (cashInHandAmt-feniDonationAmt).toFixed(2);
 
     document.getElementById('TxtCashInHand').innerText= cashInhandDeductAmt;
 
     
     // set text value
 
-    let newTotalAmount= feniDonationAmt+feniDonationAmtPrv;
+    let newTotalAmount= (feniDonationAmt+feniDonationAmtPrv).toFixed(2);
     // alert(newTotalAmount)
 
     document.getElementById('txtFeniDonationAmt').innerText= newTotalAmount;
@@ -202,13 +202,13 @@ document.getElementById('btnQmovmentDonation').addEventListener('click',function
     // alert(cashInHandAmt)
     // deduct from cash in hand
 
-    let cashInhandDeductAmt= (cashInHandAmt - qMovementDonationAmt);
+    let cashInhandDeductAmt= (cashInHandAmt - qMovementDonationAmt).toFixed(2);
 
     document.getElementById('TxtCashInHand').innerText= cashInhandDeductAmt;
 
     // set text value
 
-    let newTotalAmount= (qMovementDonationAmt + qMovementDonationAmtPrv);
+    let newTotalAmount= (qMovementDonationAmt + qMovementDonationAmtPrv).toFixed(2);
     // alert(newTotalAmount)
 
     document.getElementById('txtQmovementAmt').innerText= newTotalAmount;
