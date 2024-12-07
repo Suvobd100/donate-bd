@@ -1,4 +1,4 @@
-// Noakhali Donation
+//--------------------- Noakhali Donation
 document.getElementById('IdBtnNkhali').addEventListener('click',function () {
 
     let nKhaliDonationAmtPrv=Number(document.getElementById('TxtNkhaliDonationAmt').innerText);
@@ -46,13 +46,12 @@ document.getElementById('IdBtnNkhali').addEventListener('click',function () {
     // set text value
 
     let newTotalAmount= nKhaliDonationAmt+nKhaliDonationAmtPrv;
-    alert(newTotalAmount)
+    // alert(newTotalAmount)
 
     document.getElementById('TxtNkhaliDonationAmt').innerText= newTotalAmount;
     
-    
     // clear input value
-    document.getElementById('valNkhaliAmt').value='';
+    // document.getElementById('valNkhaliAmt').value='';
 
 
     // Show the modal and set the donation amount
@@ -68,17 +67,17 @@ document.getElementById('IdBtnNkhali').addEventListener('click',function () {
 // Close modal functionality
 document.getElementById('closeModalBtn').addEventListener('click', function () {
     document.getElementById('myModal').classList.remove('modal-open');
-    document.getElementById('valNkhaliAmt').focus();
+    document.getElementById('IdBtnNkhali').focus();
 });
 
 
-// Feni donation part start-------------------
+// -------------------Feni donation part start-------------------
 
 document.getElementById('btnFeniDonation').addEventListener('click',function () {
     // getting previous amount
     let feniDonationAmtPrv=Number(document.getElementById('txtFeniDonationAmt').innerText);
 
-        alert(feniDonationAmtPrv);
+        // alert(feniDonationAmtPrv);
 
     // getting value from input by function
     
@@ -125,13 +124,13 @@ document.getElementById('btnFeniDonation').addEventListener('click',function () 
     // set text value
 
     let newTotalAmount= feniDonationAmt+feniDonationAmtPrv;
-    alert(newTotalAmount)
+    // alert(newTotalAmount)
 
     document.getElementById('txtFeniDonationAmt').innerText= newTotalAmount;
    
    
     // clear input value
-    document.getElementById('valFeniAmt').value='';
+    // document.getElementById('valFeniAmt').value='';
 
 
   // Show the modal and set the donation amount
@@ -158,7 +157,7 @@ document.getElementById('btnQmovmentDonation').addEventListener('click',function
     // getting previous amount
     let qMovementDonationAmtPrv=Number(document.getElementById('txtQmovementAmt').innerText);
 
-        alert(qMovementDonationAmtPrv);
+        // alert(qMovementDonationAmtPrv);
 
     // getting value from input by function
     
@@ -216,7 +215,7 @@ document.getElementById('btnQmovmentDonation').addEventListener('click',function
    
    
     // clear input value
-    document.getElementById('valQmovementAmt').value='';
+    // document.getElementById('valQmovementAmt').value='';
 
 
   // Show the modal and set the donation amount
@@ -228,11 +227,57 @@ document.getElementById('btnQmovmentDonation').addEventListener('click',function
 
 })
 
-// end Qmovment
+// ----------------------------------end Qmovment
 
 
 // Close modal functionality
 document.getElementById('closeModalBtn').addEventListener('click', function () {
     document.getElementById('myModal').classList.remove('modal-open');
     document.getElementById('valQmovementAmt').focus();
+});
+
+//--------------- history btn------
+
+document.getElementById('btnHistoryTab').addEventListener('click',function () {
+    
+    const inputs=document.getElementsByTagName('input');
+
+    const h2Elements = document.getElementsByTagName('h2');
+    
+    const historyContainer= document.getElementById('history-section'); 
+
+    historyContainer.innerHTML = '';
+
+//    console.log(inputs)
+      // Get current date and time in British format
+    const now = new Date();
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false };
+    const formattedDateTime = now.toLocaleString('en-GB', options).replace(',', ''); 
+
+    for (let i = 0; i < inputs.length; i++) {
+        const userInput = inputs[i].value; 
+        // Check if userInput is not empty
+        if (userInput) {
+            const cardHeading = h2Elements[i].innerText ; 
+            console.log(cardHeading);
+            // alert(cardHeading);
+
+    //   console.log(userInput);
+   
+                const row = `
+                <div class="grid grid-cols-1 max-w-full mx-auto my-4 p-6 bg-white rounded-lg shadow-lg">
+                <p class="text-2xl font-semibold">${userInput} Taka is Donated for ${cardHeading}</p>
+                <p>Date and Time: ${formattedDateTime}</p>
+                 </div> `
+                 historyContainer.innerHTML += row;
+               
+        }
+        
+    }
+        // empty all input box value
+        document.getElementById('valQmovementAmt').value='';
+        document.getElementById('valFeniAmt').value='';
+        document.getElementById('valNkhaliAmt').value='';
+        
+    
 });
